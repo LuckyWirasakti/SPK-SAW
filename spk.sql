@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Nov 26, 2019 at 06:13 PM
--- Server version: 5.7.26
--- PHP Version: 7.2.18
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 30 Nov 2019 pada 06.16
+-- Versi server: 10.4.8-MariaDB
+-- Versi PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,42 +25,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hasil`
+-- Struktur dari tabel `karyawan`
 --
 
-DROP TABLE IF EXISTS `hasil`;
-CREATE TABLE IF NOT EXISTS `hasil` (
-  `idhasil` int(15) NOT NULL,
-  `idnilai` int(15) NOT NULL,
-  `nms_jab` varchar(30) NOT NULL,
-  `napraisal` varchar(30) NOT NULL,
-  `nnki` varchar(30) NOT NULL,
-  `ntest` varchar(30) NOT NULL,
-  `nrekom` varchar(30) NOT NULL,
-  `preferensi` varchar(30) NOT NULL,
-  PRIMARY KEY (`idhasil`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hitung`
---
-
-DROP TABLE IF EXISTS `hitung`;
-CREATE TABLE IF NOT EXISTS `hitung` (
-  `hasil` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `karyawan`
---
-
-DROP TABLE IF EXISTS `karyawan`;
-CREATE TABLE IF NOT EXISTS `karyawan` (
-  `id` int(30) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `karyawan` (
+  `id` int(30) NOT NULL,
   `nik` varchar(30) NOT NULL,
   `nama` varchar(30) NOT NULL,
   `tgl_lahir` varchar(30) NOT NULL,
@@ -132,27 +101,24 @@ CREATE TABLE IF NOT EXISTS `karyawan` (
   `alamat_bank` varchar(30) NOT NULL,
   `nama_rek` varchar(30) NOT NULL,
   `pic_hr` varchar(30) NOT NULL,
-  `time_zone` varchar(30) NOT NULL,
-  PRIMARY KEY (`id`)
+  `time_zone` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kriteria`
+-- Struktur dari tabel `kriteria`
 --
 
-DROP TABLE IF EXISTS `kriteria`;
-CREATE TABLE IF NOT EXISTS `kriteria` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `kriteria` (
+  `id` int(11) NOT NULL,
   `kd_kriteria` varchar(5) NOT NULL,
   `nm_kriteria` varchar(30) NOT NULL,
-  `bobot` decimal(10,2) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `bobot` decimal(10,2) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kriteria`
+-- Dumping data untuk tabel `kriteria`
 --
 
 INSERT INTO `kriteria` (`id`, `kd_kriteria`, `nm_kriteria`, `bobot`) VALUES
@@ -165,61 +131,137 @@ INSERT INTO `kriteria` (`id`, `kd_kriteria`, `nm_kriteria`, `bobot`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Struktur dari tabel `login`
 --
 
-DROP TABLE IF EXISTS `login`;
-CREATE TABLE IF NOT EXISTS `login` (
+CREATE TABLE `login` (
   `nama` varchar(30) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` varchar(15) NOT NULL,
-  PRIMARY KEY (`nama`)
+  `password` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `login`
+-- Dumping data untuk tabel `login`
 --
 
 INSERT INTO `login` (`nama`, `username`, `password`) VALUES
-('lucky', 'a', 'a'),
-('vira', 'vira', '123456');
+('Lucky', 'a', 'a');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penilaian`
+-- Struktur dari tabel `normal`
 --
 
-DROP TABLE IF EXISTS `penilaian`;
-CREATE TABLE IF NOT EXISTS `penilaian` (
-  `idnilai` int(30) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `normal` (
+  `idnilai` int(30) NOT NULL,
   `nama` varchar(30) NOT NULL,
   `tgl_mulai_kerja` varchar(30) NOT NULL,
   `jabatan` varchar(30) NOT NULL,
   `ms_jab` double NOT NULL,
-  `team_leader` double NOT NULL,
   `apraisal` double NOT NULL,
   `nki` double NOT NULL,
   `test` double NOT NULL,
-  `rekom` double NOT NULL,
-  PRIMARY KEY (`idnilai`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+  `rekom` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penilaian`
+-- Dumping data untuk tabel `normal`
 --
 
-INSERT INTO `penilaian` (`idnilai`, `nama`, `tgl_mulai_kerja`, `jabatan`, `ms_jab`, `team_leader`, `apraisal`, `nki`, `test`, `rekom`) VALUES
-(1, 'VARENSIUS ALFRIANTO LALLO', '2019-09-19', 'TEST', 5, 3, 3, 1, 3, 2),
-(2, 'OCTAVIA RATU', '2019-09-19', 'TEST', 5, 5, 2, 3, 2, 1),
-(3, 'ANGGA WAHYU PRASETYO', '2019-09-19', 'TEST', 5, 5, 4, 3, 4, 1),
-(4, 'ZAINAL BARAWASI', '2019-09-19', 'TEST', 4, 4, 2, 3, 2, 2),
-(5, 'JAINAL MAJID', '2019-09-19', 'TEST', 1, 1, 1, 2, 1, 1),
-(6, 'DONATUS A. RUMBEWAS', '2019-09-19', 'TEST', 4, 4, 3, 2, 3, 1),
-(7, 'HERY WIJAYA', '2019-09-19', 'TEST', 5, 5, 4, 3, 2, 1),
-(8, 'SITI RAHMATIA USMAN', '2019-09-19', 'TEST', 5, 5, 4, 3, 4, 2),
-(9, 'MAKHPUD', '2019-09-19', 'TEST', 4, 4, 3, 3, 1, 1),
-(10, 'SYARIF HIDAYATULLAH', '2019-09-19', 'TEST', 3, 3, 3, 4, 2, 1);
+INSERT INTO `normal` (`idnilai`, `nama`, `tgl_mulai_kerja`, `jabatan`, `ms_jab`, `apraisal`, `nki`, `test`, `rekom`) VALUES
+(1, '', '', '', 0.2, 0.5, 0.25, 0.75, 1),
+(2, 'Lucky Adhikrisna Wirasakti', '2019-09-19', 'Tamu', 0.4, 0.75, 0.25, 0.75, 1),
+(3, 'David', '2019-09-19', 'Tamu', 0.4, 0.5, 1.25, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `penilaian`
+--
+
+CREATE TABLE `penilaian` (
+  `idnilai` int(30) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `tgl_mulai_kerja` varchar(30) NOT NULL,
+  `jabatan` varchar(30) NOT NULL,
+  `ms_jab` double NOT NULL,
+  `apraisal` double NOT NULL,
+  `nki` double NOT NULL,
+  `test` double NOT NULL,
+  `rekom` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `penilaian`
+--
+
+INSERT INTO `penilaian` (`idnilai`, `nama`, `tgl_mulai_kerja`, `jabatan`, `ms_jab`, `apraisal`, `nki`, `test`, `rekom`) VALUES
+(1, 'Lucky Adhikrisna Wirasakti', '2019-09-19', 'Tamu', 1, 2, 1, 3, 1),
+(2, 'Lucky Adhikrisna Wirasakti', '2019-09-19', 'Tamu', 2, 3, 1, 3, 1),
+(3, 'David', '2019-09-19', 'Tamu', 2, 2, 5, 4, 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `karyawan`
+--
+ALTER TABLE `karyawan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `kriteria`
+--
+ALTER TABLE `kriteria`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`nama`);
+
+--
+-- Indeks untuk tabel `normal`
+--
+ALTER TABLE `normal`
+  ADD PRIMARY KEY (`idnilai`);
+
+--
+-- Indeks untuk tabel `penilaian`
+--
+ALTER TABLE `penilaian`
+  ADD PRIMARY KEY (`idnilai`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `karyawan`
+--
+ALTER TABLE `karyawan`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `kriteria`
+--
+ALTER TABLE `kriteria`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `normal`
+--
+ALTER TABLE `normal`
+  MODIFY `idnilai` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `penilaian`
+--
+ALTER TABLE `penilaian`
+  MODIFY `idnilai` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
