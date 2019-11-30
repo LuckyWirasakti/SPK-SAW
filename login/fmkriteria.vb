@@ -8,6 +8,7 @@ Public Class fmkriteria
     Dim du As String
     Dim cmd As New MySqlCommand
     Dim mysql As New MySqlConnection
+    Dim id As String
     Dim connection As New MySqlConnection("server=localhost;user id=root;database=spk")
     Function execommand(ByVal cmd As MySqlCommand) As Boolean
         If connection.State = ConnectionState.Closed Then
@@ -115,6 +116,7 @@ Public Class fmkriteria
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow
             row = Me.dg2.Rows(e.RowIndex)
+            id = row.Cells("id").Value.ToString
             txtkode.Text = row.Cells("kd_kriteria").Value.ToString
             txtkriteria.Text = row.Cells("nm_kriteria").Value.ToString
             txtbobot.Text = row.Cells("bobot").Value.ToString
@@ -130,7 +132,7 @@ Public Class fmkriteria
         bobotH = Replace(bobotH, ",", ".")
 
         mysqlco = "server=localhost;user id=root;database=spk"
-        str = "UPDATE `kriteria` SET `nm_kriteria`='" & txtkriteria.Text & "',`bobot`='" & bobotH & "' WHERE `kd_kriteria` = '" & txtkode.Text & "'"
+        str = "UPDATE `kriteria` SET `kd_kriteria`= '" & txtkode.Text & "', `nm_kriteria`='" & txtkriteria.Text & "',`bobot`='" & bobotH & "' WHERE `id` = '" & id & "'"
         mysql = New MySqlConnection(mysqlco)
         cmd = New MySqlCommand(str, mysql)
         Try
@@ -148,7 +150,7 @@ Public Class fmkriteria
 
     Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         mysq = "server=localhost;user id=root;database=spk"
-        mysqlco = "DELETE FROM kriteria WHERE kd_kriteria='" & txtkode.Text & "'"
+        mysqlco = "DELETE FROM kriteria WHERE id='" & id & "'"
         mysql = New MySqlConnection(mysq)
         cmd = New MySqlCommand(mysqlco, mysql)
         Try

@@ -22,9 +22,6 @@ Partial Class fmnilai
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnclose = New System.Windows.Forms.Button()
-        Me.pnlTopSide = New System.Windows.Forms.Panel()
-        Me.btnminimize = New System.Windows.Forms.Button()
         Me.pnlOnButtonPosition = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnkontak = New System.Windows.Forms.Button()
@@ -37,7 +34,9 @@ Partial Class fmnilai
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.pnlTopSide.SuspendLayout()
+        Me.btnclose = New System.Windows.Forms.Button()
+        Me.btnminimize = New System.Windows.Forms.Button()
+        Me.pnlTopSide = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLeftSide.SuspendLayout()
         Me.pnldata.SuspendLayout()
@@ -45,44 +44,8 @@ Partial Class fmnilai
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlTopSide.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btnclose
-        '
-        Me.btnclose.BackColor = System.Drawing.Color.Red
-        Me.btnclose.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_cancel_1303884
-        Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnclose.FlatAppearance.BorderSize = 0
-        Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclose.Location = New System.Drawing.Point(474, 0)
-        Me.btnclose.Name = "btnclose"
-        Me.btnclose.Size = New System.Drawing.Size(14, 22)
-        Me.btnclose.TabIndex = 12
-        Me.btnclose.UseVisualStyleBackColor = False
-        '
-        'pnlTopSide
-        '
-        Me.pnlTopSide.BackColor = System.Drawing.Color.Red
-        Me.pnlTopSide.Controls.Add(Me.btnminimize)
-        Me.pnlTopSide.Controls.Add(Me.btnclose)
-        Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
-        Me.pnlTopSide.Name = "pnlTopSide"
-        Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
-        Me.pnlTopSide.TabIndex = 9
-        '
-        'btnminimize
-        '
-        Me.btnminimize.BackColor = System.Drawing.Color.Red
-        Me.btnminimize.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_723__minus__minimize__website_3838428
-        Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnminimize.FlatAppearance.BorderSize = 0
-        Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnminimize.Location = New System.Drawing.Point(460, 0)
-        Me.btnminimize.Name = "btnminimize"
-        Me.btnminimize.Size = New System.Drawing.Size(14, 22)
-        Me.btnminimize.TabIndex = 13
-        Me.btnminimize.UseVisualStyleBackColor = False
         '
         'pnlOnButtonPosition
         '
@@ -221,6 +184,43 @@ Partial Class fmnilai
         Me.DataGridView1.Size = New System.Drawing.Size(460, 153)
         Me.DataGridView1.TabIndex = 0
         '
+        'btnclose
+        '
+        Me.btnclose.BackColor = System.Drawing.Color.Red
+        Me.btnclose.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_cancel_1303884
+        Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnclose.FlatAppearance.BorderSize = 0
+        Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclose.Location = New System.Drawing.Point(474, 0)
+        Me.btnclose.Name = "btnclose"
+        Me.btnclose.Size = New System.Drawing.Size(14, 22)
+        Me.btnclose.TabIndex = 12
+        Me.btnclose.UseVisualStyleBackColor = False
+        '
+        'btnminimize
+        '
+        Me.btnminimize.BackColor = System.Drawing.Color.Red
+        Me.btnminimize.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_723__minus__minimize__website_3838428
+        Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnminimize.FlatAppearance.BorderSize = 0
+        Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnminimize.Location = New System.Drawing.Point(460, 0)
+        Me.btnminimize.Name = "btnminimize"
+        Me.btnminimize.Size = New System.Drawing.Size(14, 22)
+        Me.btnminimize.TabIndex = 13
+        Me.btnminimize.UseVisualStyleBackColor = False
+        '
+        'pnlTopSide
+        '
+        Me.pnlTopSide.BackColor = System.Drawing.Color.Red
+        Me.pnlTopSide.Controls.Add(Me.btnminimize)
+        Me.pnlTopSide.Controls.Add(Me.btnclose)
+        Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
+        Me.pnlTopSide.Name = "pnlTopSide"
+        Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
+        Me.pnlTopSide.TabIndex = 9
+        '
         'fmnilai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -234,7 +234,6 @@ Partial Class fmnilai
         Me.Name = "fmnilai"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "fmnilai"
-        Me.pnlTopSide.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlLeftSide.ResumeLayout(False)
         Me.pnldata.ResumeLayout(False)
@@ -242,13 +241,10 @@ Partial Class fmnilai
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlTopSide.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents btnclose As Button
-    Friend WithEvents pnlTopSide As Panel
-    Friend WithEvents btnminimize As Button
     Friend WithEvents pnlOnButtonPosition As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnkontak As Button
@@ -261,4 +257,7 @@ Partial Class fmnilai
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnclose As Button
+    Friend WithEvents btnminimize As Button
+    Friend WithEvents pnlTopSide As Panel
 End Class
