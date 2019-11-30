@@ -107,6 +107,12 @@
     <Compile Include="fmkontak.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="fmLihatKaryawan.Designer.vb">
+      <DependentUpon>fmLihatKaryawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmLihatKaryawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="fmlogin.Designer.vb">
       <DependentUpon>fmlogin.vb</DependentUpon>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmkontak.resx">
       <DependentUpon>fmkontak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmLihatKaryawan.resx">
+      <DependentUpon>fmLihatKaryawan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmlogin.resx">
       <DependentUpon>fmlogin.vb</DependentUpon>

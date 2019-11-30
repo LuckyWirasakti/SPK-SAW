@@ -22,7 +22,7 @@ Public Class fmhasil
         Dim MySql As MySqlConnection
         mysqlco = "server=localhost;user id=root;database=spk"
         Dim query As String
-        query = "SELECT nama, (((normal.ms_jab/(" & masa_jabatan & "))*" & data(0) & ")+((normal.apraisal/(" & apraisal & "))*" & data(1) & ")+((normal.nki/(" & nki & "))*" & data(2) & ")+((normal.test/(" & test & "))*" & data(3) & ")+(((" & rekomendasi & ")/normal.rekom)*" & data(4) & ")) AS rangking FROM normal ORDER BY rangking DESC"
+        query = "SELECT karyawan.nama, karyawan.nik, (((normal.ms_jab/(" & masa_jabatan & "))*" & data(0) & ")+((normal.apraisal/(" & apraisal & "))*" & data(1) & ")+((normal.nki/(" & nki & "))*" & data(2) & ")+((normal.test/(" & test & "))*" & data(3) & ")+(((" & rekomendasi & ")/normal.rekom)*" & data(4) & ")) AS rangking FROM normal JOIN karyawan ON karyawan.id = normal.idnilai ORDER BY rangking DESC"
         da = New MySqlDataAdapter(query, mysqlco)
         MySql = New MySqlConnection(mysqlco)
         cmd = New MySqlCommand(str, MySql)
@@ -77,5 +77,57 @@ Public Class fmhasil
         muatBobot()
         muatNilaiMinMax()
         muatNormalisasi()
+    End Sub
+
+    Dim mRow As Integer = 0
+    Dim newpage As Boolean = True
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.ShowDialog()
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        With DataGridView1
+            Dim fmt As StringFormat = New StringFormat(StringFormatFlags.LineLimit)
+            fmt.LineAlignment = StringAlignment.Center
+            fmt.Trimming = StringTrimming.EllipsisCharacter
+            Dim y As Single = e.MarginBounds.Top
+            Do While mRow < .RowCount
+                Dim row As DataGridViewRow = .Rows(mRow)
+                Dim x As Single = e.MarginBounds.Left
+                Dim h As Single = 0
+                For Each cell As DataGridViewCell In row.Cells
+                    Dim rc As RectangleF = New RectangleF(x, y, cell.Size.Width, cell.Size.Height)
+                    e.Graphics.DrawRectangle(Pens.Black, rc.Left, rc.Top, rc.Width, rc.Height)
+                    If (newpage) Then
+                        e.Graphics.DrawString(DataGridView1.Columns(cell.ColumnIndex).HeaderText, .Font, Brushes.Black, rc, fmt)
+                    Else
+                        e.Graphics.DrawString(DataGridView1.Rows(cell.RowIndex).Cells(cell.ColumnIndex).FormattedValue.ToString(), .Font, Brushes.Black, rc, fmt)
+                    End If
+                    x += rc.Width
+                    h = Math.Max(h, rc.Height)
+                Next
+                newpage = False
+                y += h
+                mRow += 1
+                If y + h > e.MarginBounds.Bottom Then
+                    e.HasMorePages = True
+                    mRow -= 1
+                    newpage = True
+                    Exit Sub
+                End If
+            Loop
+            mRow = 0
+        End With
+    End Sub
+
+    Private Sub btnnilai_Click(sender As Object, e As EventArgs) Handles btnnilai.Click
+        fmnilai.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btndata_Click(sender As Object, e As EventArgs) Handles btndata.Click
+        fmmenu.Show()
+        Me.Close()
     End Sub
 End Class

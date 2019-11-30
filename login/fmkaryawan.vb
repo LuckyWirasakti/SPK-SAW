@@ -154,11 +154,11 @@ Public Class fmkaryawan
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
         fmmenu.Show()
-        Hide()
+        Close()
     End Sub
 
     Private Sub btntampil_Click(sender As Object, e As EventArgs) Handles btntampil.Click
-        Hide()
+        fmLihatKaryawan.Show()
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
