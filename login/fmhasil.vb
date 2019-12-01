@@ -22,7 +22,7 @@ Public Class fmhasil
         Dim MySql As MySqlConnection
         mysqlco = "server=localhost;user id=root;database=spk"
         Dim query As String
-        query = "SELECT karyawan.nama, karyawan.nik, (((normal.ms_jab/(" & masa_jabatan & "))*" & data(0) & ")+((normal.apraisal/(" & apraisal & "))*" & data(1) & ")+((normal.nki/(" & nki & "))*" & data(2) & ")+((normal.test/(" & test & "))*" & data(3) & ")+(((" & rekomendasi & ")/normal.rekom)*" & data(4) & ")) AS rangking FROM normal JOIN karyawan ON karyawan.id = normal.idnilai ORDER BY rangking DESC"
+        query = "SELECT karyawan.nama, karyawan.nik, normal.jabatan, (((normal.ms_jab/(" & masa_jabatan & "))*" & data(0) & ")+((normal.apraisal/(" & apraisal & "))*" & data(1) & ")+((normal.nki/(" & nki & "))*" & data(2) & ")+((normal.test/(" & test & "))*" & data(3) & ")+(((" & rekomendasi & ")/normal.rekom)*" & data(4) & ")) AS rangking FROM normal JOIN karyawan ON karyawan.id = normal.idnilai ORDER BY rangking DESC"
         da = New MySqlDataAdapter(query, mysqlco)
         MySql = New MySqlConnection(mysqlco)
         cmd = New MySqlCommand(str, MySql)
@@ -107,9 +107,12 @@ Public Class fmhasil
                     x += rc.Width
                     h = Math.Max(h, rc.Height)
                 Next
-                newpage = False
+                If newpage Then
+                    newpage = False
+                Else
+                    mRow += 1
+                End If
                 y += h
-                mRow += 1
                 If y + h > e.MarginBounds.Bottom Then
                     e.HasMorePages = True
                     mRow -= 1

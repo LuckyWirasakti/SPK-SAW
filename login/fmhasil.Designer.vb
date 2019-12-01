@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class fmhasil
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,29 +20,29 @@ Partial Class fmhasil
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fmhasil))
         Me.pnlLeftSide = New System.Windows.Forms.Panel()
         Me.pnlOnButtonPosition = New System.Windows.Forms.Panel()
-        Me.pnlTopSide = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
-        Me.btnPrint = New System.Windows.Forms.Button()
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.btnminimize = New System.Windows.Forms.Button()
-        Me.btnclose = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnkontak = New System.Windows.Forms.Button()
         Me.btnhasil = New System.Windows.Forms.Button()
         Me.btnnilai = New System.Windows.Forms.Button()
         Me.btndata = New System.Windows.Forms.Button()
+        Me.pnlTopSide = New System.Windows.Forms.Panel()
+        Me.btnminimize = New System.Windows.Forms.Button()
+        Me.btnclose = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.pnlLeftSide.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTopSide.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlLeftSide
@@ -67,86 +67,6 @@ Partial Class fmhasil
         Me.pnlOnButtonPosition.Name = "pnlOnButtonPosition"
         Me.pnlOnButtonPosition.Size = New System.Drawing.Size(10, 31)
         Me.pnlOnButtonPosition.TabIndex = 7
-        '
-        'pnlTopSide
-        '
-        Me.pnlTopSide.BackColor = System.Drawing.Color.Red
-        Me.pnlTopSide.Controls.Add(Me.btnminimize)
-        Me.pnlTopSide.Controls.Add(Me.btnclose)
-        Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
-        Me.pnlTopSide.Name = "pnlTopSide"
-        Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
-        Me.pnlTopSide.TabIndex = 15
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Location = New System.Drawing.Point(164, 58)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(472, 247)
-        Me.GroupBox1.TabIndex = 16
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Nilai Rangking"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(460, 222)
-        Me.DataGridView1.TabIndex = 23
-        '
-        'PrintDocument1
-        '
-        '
-        'btnPrint
-        '
-        Me.btnPrint.Location = New System.Drawing.Point(170, 311)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(75, 23)
-        Me.btnPrint.TabIndex = 17
-        Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
-        '
-        'PrintPreviewDialog1
-        '
-        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
-        Me.PrintPreviewDialog1.Enabled = True
-        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
-        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
-        Me.PrintPreviewDialog1.Visible = False
-        '
-        'btnminimize
-        '
-        Me.btnminimize.BackColor = System.Drawing.Color.Red
-        Me.btnminimize.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_723__minus__minimize__website_3838428
-        Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnminimize.FlatAppearance.BorderSize = 0
-        Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnminimize.Location = New System.Drawing.Point(450, 0)
-        Me.btnminimize.Name = "btnminimize"
-        Me.btnminimize.Size = New System.Drawing.Size(14, 22)
-        Me.btnminimize.TabIndex = 13
-        Me.btnminimize.UseVisualStyleBackColor = False
-        '
-        'btnclose
-        '
-        Me.btnclose.BackColor = System.Drawing.Color.Red
-        Me.btnclose.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_cancel_1303884
-        Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnclose.FlatAppearance.BorderSize = 0
-        Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclose.Location = New System.Drawing.Point(472, 0)
-        Me.btnclose.Name = "btnclose"
-        Me.btnclose.Size = New System.Drawing.Size(14, 22)
-        Me.btnclose.TabIndex = 12
-        Me.btnclose.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -216,6 +136,86 @@ Partial Class fmhasil
         Me.btndata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btndata.UseVisualStyleBackColor = True
         '
+        'pnlTopSide
+        '
+        Me.pnlTopSide.BackColor = System.Drawing.Color.Red
+        Me.pnlTopSide.Controls.Add(Me.btnminimize)
+        Me.pnlTopSide.Controls.Add(Me.btnclose)
+        Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
+        Me.pnlTopSide.Name = "pnlTopSide"
+        Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
+        Me.pnlTopSide.TabIndex = 15
+        '
+        'btnminimize
+        '
+        Me.btnminimize.BackColor = System.Drawing.Color.Red
+        Me.btnminimize.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_723__minus__minimize__website_3838428
+        Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnminimize.FlatAppearance.BorderSize = 0
+        Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnminimize.Location = New System.Drawing.Point(450, 0)
+        Me.btnminimize.Name = "btnminimize"
+        Me.btnminimize.Size = New System.Drawing.Size(14, 22)
+        Me.btnminimize.TabIndex = 13
+        Me.btnminimize.UseVisualStyleBackColor = False
+        '
+        'btnclose
+        '
+        Me.btnclose.BackColor = System.Drawing.Color.Red
+        Me.btnclose.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_cancel_1303884
+        Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnclose.FlatAppearance.BorderSize = 0
+        Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclose.Location = New System.Drawing.Point(472, 0)
+        Me.btnclose.Name = "btnclose"
+        Me.btnclose.Size = New System.Drawing.Size(14, 22)
+        Me.btnclose.TabIndex = 12
+        Me.btnclose.UseVisualStyleBackColor = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Location = New System.Drawing.Point(164, 58)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(472, 247)
+        Me.GroupBox1.TabIndex = 16
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Nilai Rangking"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(460, 222)
+        Me.DataGridView1.TabIndex = 23
+        '
+        'PrintDocument1
+        '
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Location = New System.Drawing.Point(170, 311)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrint.TabIndex = 17
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
         'fmhasil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -231,10 +231,10 @@ Partial Class fmhasil
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "fmhasil"
         Me.pnlLeftSide.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlTopSide.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
