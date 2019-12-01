@@ -38,6 +38,7 @@ Partial Class fmhasil
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.pnlLeftSide.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTopSide.SuspendLayout()
@@ -216,6 +217,10 @@ Partial Class fmhasil
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
         'fmhasil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -253,4 +258,5 @@ Partial Class fmhasil
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents btnPrint As Button
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents PrintDialog1 As PrintDialog
 End Class

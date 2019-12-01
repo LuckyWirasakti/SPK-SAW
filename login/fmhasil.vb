@@ -22,7 +22,7 @@ Public Class fmhasil
         Dim MySql As MySqlConnection
         mysqlco = "server=localhost;user id=root;database=spk"
         Dim query As String
-        query = "SELECT karyawan.nama, karyawan.nik, normal.jabatan, (((normal.ms_jab/(" & masa_jabatan & "))*" & data(0) & ")+((normal.apraisal/(" & apraisal & "))*" & data(1) & ")+((normal.nki/(" & nki & "))*" & data(2) & ")+((normal.test/(" & test & "))*" & data(3) & ")+(((" & rekomendasi & ")/normal.rekom)*" & data(4) & ")) AS rangking FROM normal JOIN karyawan ON karyawan.id = normal.idnilai ORDER BY rangking DESC"
+        query = "SELECT karyawan.nama AS NAMA, karyawan.nik AS NIK, normal.jabatan AS JABATAN, (((normal.ms_jab/(" & masa_jabatan & "))*" & data(0) & ")+((normal.apraisal/(" & apraisal & "))*" & data(1) & ")+((normal.nki/(" & nki & "))*" & data(2) & ")+((normal.test/(" & test & "))*" & data(3) & ")+(((" & rekomendasi & ")/normal.rekom)*" & data(4) & ")) AS RANGKING FROM normal JOIN karyawan ON karyawan.id = normal.idnilai ORDER BY rangking DESC"
         da = New MySqlDataAdapter(query, mysqlco)
         MySql = New MySqlConnection(mysqlco)
         cmd = New MySqlCommand(str, MySql)
@@ -68,7 +68,7 @@ Public Class fmhasil
         Dim i As Integer
         i = 0
         While rd.Read()
-            Data(i) = rd.Item(0)
+            data(i) = rd.Item(0)
             i = i + 1
         End While
     End Sub
@@ -82,27 +82,66 @@ Public Class fmhasil
     Dim mRow As Integer = 0
     Dim newpage As Boolean = True
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintPreviewDialog1.ShowDialog()
+        PrintDialog1.Document = PrintDocument1
+        If PrintDialog1.ShowDialog() = DialogResult.OK Then
+            PrintDocument1.Print()
+        End If
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim drawString1 As [String] = "CALON KARYAWAN TETAP"
+        Dim drawString2 As [String] = "TELKOM AKSES"
+        ' Create font and brush.
+        Dim drawFont As New Font("Arial", 16)
+        Dim drawBrush As New SolidBrush(Color.Black)
+
+        ' Create rectangle for drawing.
+        Dim a As Single = 0F
+        Dim b1 As Single = 30.0F
+        Dim b2 As Single = 60.0F
+        Dim width As Single = 900.0F
+        Dim height As Single = 50.0F
+        Dim drawRect1 As New RectangleF(a, b1, width, height)
+        Dim drawRect2 As New RectangleF(a, b2, width, height)
+
+        ' Draw rectangle to screen.
+        Dim blackPen As New Pen(Color.White)
+        e.Graphics.DrawRectangle(blackPen, a, b1, width, height)
+        e.Graphics.DrawRectangle(blackPen, a, b2, width, height)
+        ' Set format of string.
+        Dim drawFormat As New StringFormat
+        drawFormat.Alignment = StringAlignment.Center
+
+        Dim ax As Single = 300.0F
+        Dim ay As Single = 100.0F
+
+        ' Create rectangle for source image.
+        Dim srcRect As New RectangleF(0.0F, 50.0F, width, height)
+        Dim units As GraphicsUnit = GraphicsUnit.Pixel
+
+        ' Draw string to screen.
+        e.Graphics.DrawString(drawString1, drawFont, drawBrush, drawRect1, drawFormat)
+        e.Graphics.DrawString(drawString2, drawFont, drawBrush, drawRect2, drawFormat)
+
+        Dim newimage As Image = Image.FromFile("D:\image\telkom.jpg")
+        e.Graphics.DrawImage(newimage, ax, ay, srcRect, units)
         With DataGridView1
             Dim fmt As StringFormat = New StringFormat(StringFormatFlags.LineLimit)
             fmt.LineAlignment = StringAlignment.Center
             fmt.Trimming = StringTrimming.EllipsisCharacter
-            Dim y As Single = e.MarginBounds.Top
+            Dim y As Single = e.MarginBounds.Top + 70.0F
             Do While mRow < .RowCount
                 Dim row As DataGridViewRow = .Rows(mRow)
                 Dim x As Single = e.MarginBounds.Left
                 Dim h As Single = 0
+
                 For Each cell As DataGridViewCell In row.Cells
                     Dim rc As RectangleF = New RectangleF(x, y, cell.Size.Width, cell.Size.Height)
                     e.Graphics.DrawRectangle(Pens.Black, rc.Left, rc.Top, rc.Width, rc.Height)
                     If (newpage) Then
-                        e.Graphics.DrawString(DataGridView1.Columns(cell.ColumnIndex).HeaderText, .Font, Brushes.Black, rc, fmt)
+                        e.Graphics.DrawString(" " + DataGridView1.Columns(cell.ColumnIndex).HeaderText, .Font, Brushes.Black, rc, fmt)
                     Else
-                        e.Graphics.DrawString(DataGridView1.Rows(cell.RowIndex).Cells(cell.ColumnIndex).FormattedValue.ToString(), .Font, Brushes.Black, rc, fmt)
+                        e.Graphics.DrawString(" " + DataGridView1.Rows(cell.RowIndex).Cells(cell.ColumnIndex).FormattedValue.ToString(), .Font, Brushes.Black, rc, fmt)
                     End If
                     x += rc.Width
                     h = Math.Max(h, rc.Height)
@@ -132,5 +171,9 @@ Public Class fmhasil
     Private Sub btndata_Click(sender As Object, e As EventArgs) Handles btndata.Click
         fmmenu.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

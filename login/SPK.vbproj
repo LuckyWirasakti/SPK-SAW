@@ -65,6 +65,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MySql.Data.DLL</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
