@@ -28,7 +28,7 @@
     End Sub
 
     Private Sub btnkontak_Click(sender As Object, e As EventArgs) Handles btnkontak.Click
-        fmkontak.Show()
+        fmubah.Show()
         Hide()
     End Sub
 

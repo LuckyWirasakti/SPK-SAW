@@ -31,7 +31,7 @@ Public Class fmnilai
     End Sub
 
     Private Sub btnkontak_Click(sender As Object, e As EventArgs)
-        fmkontak.Show()
+        fmubah.Show()
         Hide()
     End Sub
 

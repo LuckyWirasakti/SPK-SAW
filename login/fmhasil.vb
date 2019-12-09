@@ -82,6 +82,8 @@ Public Class fmhasil
     Dim mRow As Integer = 0
     Dim newpage As Boolean = True
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        'PrintPreviewDialog1.Document = PrintDocument1
+        'PrintPreviewDialog1.Show()
         PrintDialog1.Document = PrintDocument1
         If PrintDialog1.ShowDialog() = DialogResult.OK Then
             PrintDocument1.Print()
@@ -97,8 +99,8 @@ Public Class fmhasil
 
         ' Create rectangle for drawing.
         Dim a As Single = 0F
-        Dim b1 As Single = 30.0F
-        Dim b2 As Single = 60.0F
+        Dim b1 As Single = 90.0F
+        Dim b2 As Single = 120.0F
         Dim width As Single = 900.0F
         Dim height As Single = 50.0F
         Dim drawRect1 As New RectangleF(a, b1, width, height)
@@ -112,19 +114,20 @@ Public Class fmhasil
         Dim drawFormat As New StringFormat
         drawFormat.Alignment = StringAlignment.Center
 
-        Dim ax As Single = 300.0F
-        Dim ay As Single = 100.0F
+        Dim ax As Single = 20.0F
+        Dim ay As Single = 20.0F
 
         ' Create rectangle for source image.
         Dim srcRect As New RectangleF(0.0F, 50.0F, width, height)
         Dim units As GraphicsUnit = GraphicsUnit.Pixel
 
+        Dim newimage As Image = Image.FromFile("D:\image\telkom.jpg")
+        e.Graphics.DrawImage(newimage, ax, ay, srcRect, units)
+
         ' Draw string to screen.
         e.Graphics.DrawString(drawString1, drawFont, drawBrush, drawRect1, drawFormat)
         e.Graphics.DrawString(drawString2, drawFont, drawBrush, drawRect2, drawFormat)
 
-        Dim newimage As Image = Image.FromFile("D:\image\telkom.jpg")
-        e.Graphics.DrawImage(newimage, ax, ay, srcRect, units)
         With DataGridView1
             Dim fmt As StringFormat = New StringFormat(StringFormatFlags.LineLimit)
             fmt.LineAlignment = StringAlignment.Center

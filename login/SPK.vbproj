@@ -90,22 +90,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fmdaftar.Designer.vb">
-      <DependentUpon>fmdaftar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="fmdaftar.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="fmhasil.Designer.vb">
       <DependentUpon>fmhasil.vb</DependentUpon>
     </Compile>
     <Compile Include="fmhasil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmkontak.Designer.vb">
-      <DependentUpon>fmkontak.vb</DependentUpon>
+    <Compile Include="fmubah.Designer.vb">
+      <DependentUpon>fmubah.vb</DependentUpon>
     </Compile>
-    <Compile Include="fmkontak.vb">
+    <Compile Include="fmubah.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fmLihatKaryawan.Designer.vb">
@@ -168,14 +162,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="fmdaftar.resx">
-      <DependentUpon>fmdaftar.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fmhasil.resx">
       <DependentUpon>fmhasil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmkontak.resx">
-      <DependentUpon>fmkontak.vb</DependentUpon>
+    <EmbeddedResource Include="fmubah.resx">
+      <DependentUpon>fmubah.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmLihatKaryawan.resx">
       <DependentUpon>fmLihatKaryawan.vb</DependentUpon>

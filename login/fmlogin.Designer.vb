@@ -18,7 +18,7 @@ Partial Class fmlogin
     Friend WithEvents PasswordLabel As System.Windows.Forms.Label
     Friend WithEvents txtusername As System.Windows.Forms.TextBox
     Friend WithEvents txtpass As System.Windows.Forms.TextBox
-    Friend WithEvents OK As System.Windows.Forms.Button
+    Friend WithEvents btnLogin As System.Windows.Forms.Button
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -32,8 +32,7 @@ Partial Class fmlogin
         Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.txtusername = New System.Windows.Forms.TextBox()
         Me.txtpass = New System.Windows.Forms.TextBox()
-        Me.OK = New System.Windows.Forms.Button()
-        Me.btndaftar = New System.Windows.Forms.Button()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnminimize = New System.Windows.Forms.Button()
         Me.btnclose = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -41,18 +40,18 @@ Partial Class fmlogin
         '
         'UsernameLabel
         '
-        Me.UsernameLabel.Location = New System.Drawing.Point(91, 139)
+        Me.UsernameLabel.Location = New System.Drawing.Point(10, 132)
         Me.UsernameLabel.Name = "UsernameLabel"
-        Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
+        Me.UsernameLabel.Size = New System.Drawing.Size(154, 23)
         Me.UsernameLabel.TabIndex = 0
         Me.UsernameLabel.Text = "&User name"
         Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PasswordLabel
         '
-        Me.PasswordLabel.Location = New System.Drawing.Point(91, 196)
+        Me.PasswordLabel.Location = New System.Drawing.Point(10, 175)
         Me.PasswordLabel.Name = "PasswordLabel"
-        Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
+        Me.PasswordLabel.Size = New System.Drawing.Size(156, 23)
         Me.PasswordLabel.TabIndex = 2
         Me.PasswordLabel.Text = "&Password"
         Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -60,43 +59,31 @@ Partial Class fmlogin
         'txtusername
         '
         Me.txtusername.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.txtusername.Location = New System.Drawing.Point(93, 159)
+        Me.txtusername.Location = New System.Drawing.Point(12, 152)
         Me.txtusername.Name = "txtusername"
-        Me.txtusername.Size = New System.Drawing.Size(220, 20)
+        Me.txtusername.Size = New System.Drawing.Size(154, 20)
         Me.txtusername.TabIndex = 1
         '
         'txtpass
         '
         Me.txtpass.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.txtpass.Location = New System.Drawing.Point(93, 216)
+        Me.txtpass.Location = New System.Drawing.Point(12, 195)
         Me.txtpass.Name = "txtpass"
         Me.txtpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtpass.Size = New System.Drawing.Size(220, 20)
+        Me.txtpass.Size = New System.Drawing.Size(156, 20)
         Me.txtpass.TabIndex = 3
         '
-        'OK
+        'btnLogin
         '
-        Me.OK.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.OK.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OK.ForeColor = System.Drawing.Color.White
-        Me.OK.Location = New System.Drawing.Point(93, 257)
-        Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(218, 29)
-        Me.OK.TabIndex = 4
-        Me.OK.Text = "Sign In"
-        Me.OK.UseVisualStyleBackColor = False
-        '
-        'btndaftar
-        '
-        Me.btndaftar.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.btndaftar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btndaftar.ForeColor = System.Drawing.Color.White
-        Me.btndaftar.Location = New System.Drawing.Point(93, 292)
-        Me.btndaftar.Name = "btndaftar"
-        Me.btndaftar.Size = New System.Drawing.Size(218, 29)
-        Me.btndaftar.TabIndex = 6
-        Me.btndaftar.Text = "Sign Up"
-        Me.btndaftar.UseVisualStyleBackColor = False
+        Me.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(10, 221)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(161, 29)
+        Me.btnLogin.TabIndex = 4
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'btnminimize
         '
@@ -104,7 +91,7 @@ Partial Class fmlogin
         Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnminimize.FlatAppearance.BorderSize = 0
         Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnminimize.Location = New System.Drawing.Point(361, 2)
+        Me.btnminimize.Location = New System.Drawing.Point(139, 2)
         Me.btnminimize.Name = "btnminimize"
         Me.btnminimize.Size = New System.Drawing.Size(14, 22)
         Me.btnminimize.TabIndex = 13
@@ -116,7 +103,7 @@ Partial Class fmlogin
         Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnclose.FlatAppearance.BorderSize = 0
         Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclose.Location = New System.Drawing.Point(379, 2)
+        Me.btnclose.Location = New System.Drawing.Point(159, 2)
         Me.btnclose.Name = "btnclose"
         Me.btnclose.Size = New System.Drawing.Size(14, 22)
         Me.btnclose.TabIndex = 12
@@ -126,23 +113,22 @@ Partial Class fmlogin
         '
         Me.Panel1.BackgroundImage = Global.spk.My.Resources.Resources.user
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel1.Location = New System.Drawing.Point(161, 39)
+        Me.Panel1.Location = New System.Drawing.Point(47, 39)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(89, 80)
         Me.Panel1.TabIndex = 5
         '
         'fmlogin
         '
-        Me.AcceptButton = Me.OK
+        Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(396, 368)
+        Me.ClientSize = New System.Drawing.Size(185, 261)
         Me.Controls.Add(Me.btnminimize)
         Me.Controls.Add(Me.btnclose)
-        Me.Controls.Add(Me.btndaftar)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.OK)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtpass)
         Me.Controls.Add(Me.txtusername)
         Me.Controls.Add(Me.PasswordLabel)
@@ -159,7 +145,6 @@ Partial Class fmlogin
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents btndaftar As System.Windows.Forms.Button
     Friend WithEvents btnminimize As System.Windows.Forms.Button
     Friend WithEvents btnclose As System.Windows.Forms.Button
 
