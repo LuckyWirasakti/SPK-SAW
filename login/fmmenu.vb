@@ -24,12 +24,12 @@
 
     Private Sub btnhasil_Click(sender As Object, e As EventArgs) Handles btnhasil.Click
         fmhasil.Show()
-        Hide()
+        Me.Close()
     End Sub
 
     Private Sub btnkontak_Click(sender As Object, e As EventArgs) Handles btnkontak.Click
         fmubah.Show()
-        Hide()
+        Me.Close()
     End Sub
 
     Private Sub btnkaryawan_Click_1(sender As Object, e As EventArgs) Handles btnkaryawan.Click

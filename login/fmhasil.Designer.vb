@@ -89,7 +89,7 @@ Partial Class fmhasil
         Me.btnkontak.Name = "btnkontak"
         Me.btnkontak.Size = New System.Drawing.Size(153, 31)
         Me.btnkontak.TabIndex = 2
-        Me.btnkontak.Text = "     Contact Us"
+        Me.btnkontak.Text = "     Ubah Kata Sandi"
         Me.btnkontak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnkontak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnkontak.UseVisualStyleBackColor = True

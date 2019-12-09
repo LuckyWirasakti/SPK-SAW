@@ -88,7 +88,7 @@ Partial Class fmubah
         Me.btnkontak.Name = "btnkontak"
         Me.btnkontak.Size = New System.Drawing.Size(154, 31)
         Me.btnkontak.TabIndex = 2
-        Me.btnkontak.Text = "     Hasil Penilaian"
+        Me.btnkontak.Text = "     Ubah Kata Sandi"
         Me.btnkontak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnkontak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnkontak.UseVisualStyleBackColor = True
@@ -179,9 +179,9 @@ Partial Class fmubah
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.Location = New System.Drawing.Point(168, 61)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(163, 25)
+        Me.lblPassword.Size = New System.Drawing.Size(174, 25)
         Me.lblPassword.TabIndex = 8
-        Me.lblPassword.Text = "Ubah Password"
+        Me.lblPassword.Text = "Ubah Kata Sandi"
         '
         'txtPassword
         '

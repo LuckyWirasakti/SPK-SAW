@@ -24,7 +24,6 @@ Partial Class fmnilai
     Private Sub InitializeComponent()
         Me.pnlOnButtonPosition = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnkontak = New System.Windows.Forms.Button()
         Me.btnhasil = New System.Windows.Forms.Button()
         Me.btnnilai = New System.Windows.Forms.Button()
         Me.btndata = New System.Windows.Forms.Button()
@@ -37,6 +36,8 @@ Partial Class fmnilai
         Me.btnclose = New System.Windows.Forms.Button()
         Me.btnminimize = New System.Windows.Forms.Button()
         Me.pnlTopSide = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnkontak = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLeftSide.SuspendLayout()
         Me.pnldata.SuspendLayout()
@@ -65,20 +66,6 @@ Partial Class fmnilai
         Me.PictureBox1.Size = New System.Drawing.Size(182, 53)
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
-        '
-        'btnkontak
-        '
-        Me.btnkontak.FlatAppearance.BorderSize = 0
-        Me.btnkontak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnkontak.Image = Global.spk.My.Resources.Resources.contact__1_
-        Me.btnkontak.Location = New System.Drawing.Point(2, 297)
-        Me.btnkontak.Name = "btnkontak"
-        Me.btnkontak.Size = New System.Drawing.Size(156, 31)
-        Me.btnkontak.TabIndex = 2
-        Me.btnkontak.Text = "     Contact Us"
-        Me.btnkontak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnkontak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnkontak.UseVisualStyleBackColor = True
         '
         'btnhasil
         '
@@ -126,6 +113,7 @@ Partial Class fmnilai
         'pnlLeftSide
         '
         Me.pnlLeftSide.BackColor = System.Drawing.Color.White
+        Me.pnlLeftSide.Controls.Add(Me.Button1)
         Me.pnlLeftSide.Controls.Add(Me.pnlOnButtonPosition)
         Me.pnlLeftSide.Controls.Add(Me.PictureBox1)
         Me.pnlLeftSide.Controls.Add(Me.btnkontak)
@@ -221,6 +209,34 @@ Partial Class fmnilai
         Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
         Me.pnlTopSide.TabIndex = 9
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = Global.spk.My.Resources.Resources.contact__1_
+        Me.Button1.Location = New System.Drawing.Point(4, 297)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(154, 31)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "     Ubah Kata Sandi"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnkontak
+        '
+        Me.btnkontak.FlatAppearance.BorderSize = 0
+        Me.btnkontak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnkontak.Image = Global.spk.My.Resources.Resources.contact__1_
+        Me.btnkontak.Location = New System.Drawing.Point(2, 297)
+        Me.btnkontak.Name = "btnkontak"
+        Me.btnkontak.Size = New System.Drawing.Size(156, 31)
+        Me.btnkontak.TabIndex = 2
+        Me.btnkontak.Text = "     Contact Us"
+        Me.btnkontak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnkontak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnkontak.UseVisualStyleBackColor = True
+        '
         'fmnilai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -247,7 +263,6 @@ Partial Class fmnilai
     End Sub
     Friend WithEvents pnlOnButtonPosition As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnkontak As Button
     Friend WithEvents btnhasil As Button
     Friend WithEvents btnnilai As Button
     Friend WithEvents btndata As Button
@@ -260,4 +275,6 @@ Partial Class fmnilai
     Friend WithEvents btnclose As Button
     Friend WithEvents btnminimize As Button
     Friend WithEvents pnlTopSide As Panel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents btnkontak As Button
 End Class

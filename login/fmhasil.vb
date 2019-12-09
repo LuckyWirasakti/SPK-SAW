@@ -179,4 +179,9 @@ Public Class fmhasil
     Private Sub Button2_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub btnkontak_Click(sender As Object, e As EventArgs) Handles btnkontak.Click
+        fmubah.Show()
+        Me.Close()
+    End Sub
 End Class
