@@ -28,6 +28,8 @@ Partial Class fmnilai
         Me.btnnilai = New System.Windows.Forms.Button()
         Me.btndata = New System.Windows.Forms.Button()
         Me.pnlLeftSide = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnkontak = New System.Windows.Forms.Button()
         Me.pnldata = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
@@ -36,8 +38,6 @@ Partial Class fmnilai
         Me.btnclose = New System.Windows.Forms.Button()
         Me.btnminimize = New System.Windows.Forms.Button()
         Me.pnlTopSide = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnkontak = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLeftSide.SuspendLayout()
         Me.pnldata.SuspendLayout()
@@ -126,6 +126,34 @@ Partial Class fmnilai
         Me.pnlLeftSide.Size = New System.Drawing.Size(158, 429)
         Me.pnlLeftSide.TabIndex = 7
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = Global.spk.My.Resources.Resources.contact__1_
+        Me.Button1.Location = New System.Drawing.Point(4, 297)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(154, 31)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "     Ubah Kata Sandi"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnkontak
+        '
+        Me.btnkontak.FlatAppearance.BorderSize = 0
+        Me.btnkontak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnkontak.Image = Global.spk.My.Resources.Resources.contact__1_
+        Me.btnkontak.Location = New System.Drawing.Point(2, 297)
+        Me.btnkontak.Name = "btnkontak"
+        Me.btnkontak.Size = New System.Drawing.Size(156, 31)
+        Me.btnkontak.TabIndex = 2
+        Me.btnkontak.Text = "     Contact Us"
+        Me.btnkontak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnkontak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnkontak.UseVisualStyleBackColor = True
+        '
         'pnldata
         '
         Me.pnldata.BackColor = System.Drawing.Color.White
@@ -208,34 +236,6 @@ Partial Class fmnilai
         Me.pnlTopSide.Name = "pnlTopSide"
         Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
         Me.pnlTopSide.TabIndex = 9
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.spk.My.Resources.Resources.contact__1_
-        Me.Button1.Location = New System.Drawing.Point(4, 297)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(154, 31)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "     Ubah Kata Sandi"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'btnkontak
-        '
-        Me.btnkontak.FlatAppearance.BorderSize = 0
-        Me.btnkontak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnkontak.Image = Global.spk.My.Resources.Resources.contact__1_
-        Me.btnkontak.Location = New System.Drawing.Point(2, 297)
-        Me.btnkontak.Name = "btnkontak"
-        Me.btnkontak.Size = New System.Drawing.Size(156, 31)
-        Me.btnkontak.TabIndex = 2
-        Me.btnkontak.Text = "     Contact Us"
-        Me.btnkontak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnkontak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnkontak.UseVisualStyleBackColor = True
         '
         'fmnilai
         '

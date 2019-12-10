@@ -22,7 +22,7 @@ Public Class fmlogin
             End While
             If count = 1 Then
                 fmmenu.Show()
-                Hide()
+                Close()
             ElseIf count > 1 Then
                 MessageBox.Show("Username dan Password Sama")
             Else
@@ -57,7 +57,7 @@ Public Class fmlogin
             End While
             If count = 1 Then
                 fmmenu.Show()
-                Hide()
+                Close()
             ElseIf count > 1 Then
                 MessageBox.Show("Username dan Password Sama")
             Else

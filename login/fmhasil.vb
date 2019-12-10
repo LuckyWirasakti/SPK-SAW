@@ -1,6 +1,18 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class fmhasil
+
+    Private _login As String
+
+    Public Property Login As String
+        Get
+            Return _login
+        End Get
+        Set(value As String)
+            _login = value
+        End Set
+    End Property
+
     Dim masa_jabatan As Double
     Dim apraisal As Double
     Dim nki As Double

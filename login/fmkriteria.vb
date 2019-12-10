@@ -40,11 +40,11 @@ Public Class fmkriteria
         txtbobot.Text = ""
     End Sub
     Private Sub loaddata()
-        dg2.DataSource = Nothing
-        dg2.Refresh()
-        str = "select * from kriteria"
+        mysqlco = "server=localhost;user id=root;database=spk"
+        buka_koneksi()
+        da = New MySqlDataAdapter("SELECT id AS No, kd_kriteria AS Kriteria, nm_kriteria AS Penilaian, bobot AS Bobot FROM kriteria", mysqlco)
+        mysql = New MySqlConnection(mysqlco)
         cmd = New MySqlCommand(str, mysql)
-        da = New MySqlDataAdapter(cmd)
         dt = New DataTable
         da.Fill(dt)
         dg2.DataSource = dt
@@ -83,16 +83,12 @@ Public Class fmkriteria
             bobot = (bobot / 100)
             bobotH = CStr(bobot)
             bobotH = Replace(bobotH, ",", ".")
-
-            str = ("INSERT INTO `kriteria` (`kd_kriteria`,`nm_kriteria`,`bobot`) values ('" & txtkode.Text & "','" & txtkriteria.Text & "','" + bobotH + "')")
-            mysql = New MySqlConnection(mysqlco)
-            cmd = New MySqlCommand(str, mysql)
+            Call buka_koneksi()
+            cmd = New MySqlCommand("INSERT INTO `kriteria` VALUES (NULL,'" & txtkode.Text & "','" & txtkriteria.Text & "','" + bobotH + "')", mysqlcon)
             Try
-                mysql.Open()
-                read = cmd.ExecuteReader()
-                read.Read()
+                cmd.ExecuteNonQuery()
                 MessageBox.Show("DATA TERSIMPAN")
-                mysql.Close()
+                mysqlcon.Close()
                 loaddata()
                 kosong()
             Catch ex As Exception
@@ -102,24 +98,17 @@ Public Class fmkriteria
     End Sub
 
     Private Sub fmkriteria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mysqlco = "server=localhost;user id=root;database=spk"
-        buka_koneksi()
-        da = New MySqlDataAdapter("SELECT * FROM kriteria order by kd_kriteria asc", mysqlco)
-        mysql = New MySqlConnection(mysqlco)
-        cmd = New MySqlCommand(str, mysql)
-        dt = New DataTable
-        da.Fill(dt)
-        dg2.DataSource = dt
+        loaddata()
     End Sub
 
     Private Sub dg2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg2.CellClick
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow
             row = Me.dg2.Rows(e.RowIndex)
-            id = row.Cells("id").Value.ToString
-            txtkode.Text = row.Cells("kd_kriteria").Value.ToString
-            txtkriteria.Text = row.Cells("nm_kriteria").Value.ToString
-            txtbobot.Text = row.Cells("bobot").Value.ToString
+            id = row.Cells("No").Value.ToString
+            txtkode.Text = row.Cells("Kriteria").Value.ToString
+            txtkriteria.Text = row.Cells("Penilaian").Value.ToString
+            txtbobot.Text = (CDbl(row.Cells("Bobot").Value) * 100).ToString
         End If
     End Sub
 

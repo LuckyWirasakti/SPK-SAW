@@ -12,20 +12,20 @@ Public Class fmubah
 
     Private Sub btndata_Click(sender As Object, e As EventArgs) Handles btndata.Click
         fmmenu.Show()
-        Hide()
+        Close()
     End Sub
 
     Private Sub btnnilai_Click(sender As Object, e As EventArgs) Handles btnnilai.Click
         fmnilai.Show()
-        Hide()
+        Close()
     End Sub
 
     Private Sub btnhasil_Click(sender As Object, e As EventArgs) Handles btnhasil.Click
-        Hide()
+        fmhasil.Show()
+        Close()
     End Sub
 
     Private Sub btnkontak_Click(sender As Object, e As EventArgs) Handles btnkontak.Click
-
     End Sub
 
     Private Sub txtPassword_Enter(sender As Object, e As EventArgs) Handles txtPassword.Enter
