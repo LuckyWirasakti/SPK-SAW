@@ -22,7 +22,6 @@ Partial Class fmhasil
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fmhasil))
         Me.pnlLeftSide = New System.Windows.Forms.Panel()
         Me.pnlOnButtonPosition = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -34,16 +33,12 @@ Partial Class fmhasil
         Me.btnminimize = New System.Windows.Forms.Button()
         Me.btnclose = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
-        Me.btnPrint = New System.Windows.Forms.Button()
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.CrystalReport11 = New spk.CrystalReport1()
         Me.pnlLeftSide.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTopSide.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlLeftSide
@@ -58,7 +53,7 @@ Partial Class fmhasil
         Me.pnlLeftSide.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlLeftSide.Location = New System.Drawing.Point(0, 0)
         Me.pnlLeftSide.Name = "pnlLeftSide"
-        Me.pnlLeftSide.Size = New System.Drawing.Size(158, 429)
+        Me.pnlLeftSide.Size = New System.Drawing.Size(158, 629)
         Me.pnlLeftSide.TabIndex = 9
         '
         'pnlOnButtonPosition
@@ -145,7 +140,7 @@ Partial Class fmhasil
         Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
         Me.pnlTopSide.Name = "pnlTopSide"
-        Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
+        Me.pnlTopSide.Size = New System.Drawing.Size(729, 52)
         Me.pnlTopSide.TabIndex = 15
         '
         'btnminimize
@@ -155,7 +150,7 @@ Partial Class fmhasil
         Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnminimize.FlatAppearance.BorderSize = 0
         Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnminimize.Location = New System.Drawing.Point(450, 0)
+        Me.btnminimize.Location = New System.Drawing.Point(680, 0)
         Me.btnminimize.Name = "btnminimize"
         Me.btnminimize.Size = New System.Drawing.Size(14, 22)
         Me.btnminimize.TabIndex = 13
@@ -168,7 +163,7 @@ Partial Class fmhasil
         Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnclose.FlatAppearance.BorderSize = 0
         Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclose.Location = New System.Drawing.Point(472, 0)
+        Me.btnclose.Location = New System.Drawing.Point(700, 0)
         Me.btnclose.Name = "btnclose"
         Me.btnclose.Size = New System.Drawing.Size(14, 22)
         Me.btnclose.TabIndex = 12
@@ -176,58 +171,34 @@ Partial Class fmhasil
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Controls.Add(Me.CrystalReportViewer1)
         Me.GroupBox1.Location = New System.Drawing.Point(164, 58)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(472, 247)
+        Me.GroupBox1.Size = New System.Drawing.Size(711, 559)
         Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nilai Rangking"
         '
-        'DataGridView1
+        'CrystalReportViewer1
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(460, 222)
-        Me.DataGridView1.TabIndex = 23
-        '
-        'PrintDocument1
-        '
-        '
-        'btnPrint
-        '
-        Me.btnPrint.Location = New System.Drawing.Point(170, 311)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(75, 23)
-        Me.btnPrint.TabIndex = 17
-        Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
-        '
-        'PrintPreviewDialog1
-        '
-        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
-        Me.PrintPreviewDialog1.Enabled = True
-        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
-        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
-        Me.PrintPreviewDialog1.Visible = False
-        '
-        'PrintDialog1
-        '
-        Me.PrintDialog1.UseEXDialog = True
+        Me.CrystalReportViewer1.ActiveViewIndex = 0
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(3, 16)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport11
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(705, 540)
+        Me.CrystalReportViewer1.TabIndex = 18
+        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'fmhasil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(648, 429)
-        Me.Controls.Add(Me.btnPrint)
+        Me.ClientSize = New System.Drawing.Size(887, 629)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.pnlTopSide)
         Me.Controls.Add(Me.pnlLeftSide)
@@ -239,7 +210,6 @@ Partial Class fmhasil
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlTopSide.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -254,9 +224,6 @@ Partial Class fmhasil
     Friend WithEvents btnminimize As System.Windows.Forms.Button
     Friend WithEvents btnclose As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents PrintDocument1 As Printing.PrintDocument
-    Friend WithEvents btnPrint As Button
-    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
-    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents CrystalReport11 As CrystalReport1
 End Class
