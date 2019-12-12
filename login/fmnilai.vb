@@ -51,39 +51,36 @@ Public Class fmnilai
     Private Sub fmnilai_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         muatAlternatif()
         muatNormalisasi()
-    End Sub
-
-    Sub MySub()
-        '' buat loop untuk update table normalisasi
-
+        muatAlternatif2()
+        muatNormalisasi2()
     End Sub
 
     Sub muatAlternatif()
-        Dim mysqlco As String
-        Dim cmd As MySqlCommand
-        Dim MySql As MySqlConnection
-        mysqlco = "server=localhost;user id=root;database=spk"
         buka_koneksi()
-        da = New MySqlDataAdapter("SELECT * FROM normal", mysqlco)
-        MySql = New MySqlConnection(mysqlco)
-        cmd = New MySqlCommand(str, MySql)
+        da = New MySqlDataAdapter("SELECT * FROM alternatif", mysqlcon)
         dt = New DataTable
         da.Fill(dt)
-        DataGridView1.DataSource = dt
+        dgvAlternatif.DataSource = dt
     End Sub
     Sub muatNormalisasi()
-        Dim mysqlco As String
-        Dim cmd As MySqlCommand
-        Dim MySql As MySqlConnection
-        mysqlco = "server=localhost;user id=root;database=spk"
-        Dim query As String
-        query = "SELECT * FROM normal2"
-        da = New MySqlDataAdapter(query, mysqlco)
-        MySql = New MySqlConnection(mysqlco)
-        cmd = New MySqlCommand(str, MySql)
+        da = New MySqlDataAdapter("SELECT * FROM normal", mysqlcon)
         dt = New DataTable
         da.Fill(dt)
-        DataGridView2.DataSource = dt
+        dgvNormal.DataSource = dt
+    End Sub
+
+    Sub muatAlternatif2()
+        buka_koneksi()
+        da = New MySqlDataAdapter("SELECT * FROM alternatif2", mysqlcon)
+        dt = New DataTable
+        da.Fill(dt)
+        dgvAlternatif2.DataSource = dt
+    End Sub
+    Sub muatNormalisasi2()
+        da = New MySqlDataAdapter("SELECT * FROM normal2", mysqlcon)
+        dt = New DataTable
+        da.Fill(dt)
+        dgvNormal2.DataSource = dt
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

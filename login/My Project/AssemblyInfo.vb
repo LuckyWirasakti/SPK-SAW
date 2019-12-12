@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("login")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("login")> 
+<Assembly: AssemblyTitle("SPK - SAW")>
+<Assembly: AssemblyDescription("sakti developer")>
+<Assembly: AssemblyCompany("Digital Inovasi Bangsa")>
+<Assembly: AssemblyProduct("SPK- SAW")>
 <Assembly: AssemblyCopyright("Copyright ©  2019")> 
 <Assembly: AssemblyTrademark("")> 
 
