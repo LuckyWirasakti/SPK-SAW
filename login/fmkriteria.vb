@@ -96,6 +96,7 @@ Public Class fmkriteria
     End Sub
 
     Private Sub btnclose_Click_1(sender As Object, e As EventArgs) Handles btnclose.Click
+        fmmenu.Visible = True
         Me.Close()
     End Sub
 

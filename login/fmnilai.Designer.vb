@@ -22,6 +22,7 @@ Partial Class fmnilai
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fmnilai))
         Me.pnlOnButtonPosition = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnhasil = New System.Windows.Forms.Button()
@@ -335,6 +336,7 @@ Partial Class fmnilai
         Me.Controls.Add(Me.pnlLeftSide)
         Me.Controls.Add(Me.pnldata)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "fmnilai"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "fmnilai"

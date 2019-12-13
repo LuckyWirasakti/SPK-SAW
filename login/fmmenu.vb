@@ -37,6 +37,7 @@
     End Sub
 
     Private Sub btnkriteria_Click_1(sender As Object, e As EventArgs) Handles btnkriteria.Click
+        Me.Visible = False
         fmkriteria.Show()
     End Sub
 

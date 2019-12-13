@@ -656,6 +656,8 @@ Partial Class fmpenilaian
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "fmpenilaian"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "penilaian"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

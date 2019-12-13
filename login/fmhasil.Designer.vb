@@ -22,6 +22,7 @@ Partial Class fmhasil
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fmhasil))
         Me.pnlLeftSide = New System.Windows.Forms.Panel()
         Me.pnlOnButtonPosition = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -36,11 +37,11 @@ Partial Class fmhasil
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.CrystalReport11 = New spk.CrystalReport1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.CrystalReportViewer2 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.CrystalReport21 = New spk.CrystalReport2()
-        Me.CrystalReport11 = New spk.CrystalReport1()
         Me.pnlLeftSide.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTopSide.SuspendLayout()
@@ -272,6 +273,7 @@ Partial Class fmhasil
         Me.Controls.Add(Me.pnlTopSide)
         Me.Controls.Add(Me.pnlLeftSide)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "fmhasil"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "fmhasil"

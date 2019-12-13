@@ -351,6 +351,8 @@ Partial Class fmkriteria
         Me.Controls.Add(Me.btnclose)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "fmkriteria"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "kriteria"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

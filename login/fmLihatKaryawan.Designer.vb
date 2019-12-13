@@ -25,9 +25,9 @@ Partial Class fmLihatKaryawan
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnminimize = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnclose = New System.Windows.Forms.Button()
-        Me.btnminimize = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -77,6 +77,18 @@ Partial Class fmLihatKaryawan
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(794, 66)
         Me.TableLayoutPanel2.TabIndex = 2
         '
+        'btnminimize
+        '
+        Me.btnminimize.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_723__minus__minimize__website_3838428
+        Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnminimize.FlatAppearance.BorderSize = 0
+        Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnminimize.Location = New System.Drawing.Point(747, 3)
+        Me.btnminimize.Name = "btnminimize"
+        Me.btnminimize.Size = New System.Drawing.Size(14, 22)
+        Me.btnminimize.TabIndex = 18
+        Me.btnminimize.UseVisualStyleBackColor = True
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.spk.My.Resources.Resources.telkom_akses_logo_7ECCB5449C_seeklogo_com
@@ -99,18 +111,6 @@ Partial Class fmLihatKaryawan
         Me.btnclose.TabIndex = 16
         Me.btnclose.UseVisualStyleBackColor = True
         '
-        'btnminimize
-        '
-        Me.btnminimize.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_723__minus__minimize__website_3838428
-        Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnminimize.FlatAppearance.BorderSize = 0
-        Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnminimize.Location = New System.Drawing.Point(747, 3)
-        Me.btnminimize.Name = "btnminimize"
-        Me.btnminimize.Size = New System.Drawing.Size(14, 22)
-        Me.btnminimize.TabIndex = 18
-        Me.btnminimize.UseVisualStyleBackColor = True
-        '
         'fmLihatKaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -119,6 +119,8 @@ Partial Class fmLihatKaryawan
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "fmLihatKaryawan"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "fmLihatKaryawan"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
