@@ -36,10 +36,12 @@ Partial Class fmhasil
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.CrystalReport11 = New spk.CrystalReport1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.CrystalReportViewer2 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.CrystalReport21 = New spk.CrystalReport2()
         Me.pnlLeftSide.SuspendLayout()
@@ -204,6 +206,7 @@ Partial Class fmhasil
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.CrystalReportViewer1)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
@@ -212,6 +215,16 @@ Partial Class fmhasil
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nilai Rangking"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"General Manager"})
+        Me.ComboBox1.Location = New System.Drawing.Point(88, 45)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 19
+        Me.ComboBox1.Text = "-- Choose Position --"
         '
         'CrystalReportViewer1
         '
@@ -240,6 +253,7 @@ Partial Class fmhasil
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.ComboBox2)
         Me.GroupBox2.Controls.Add(Me.CrystalReportViewer2)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox2.Location = New System.Drawing.Point(3, 3)
@@ -248,6 +262,16 @@ Partial Class fmhasil
         Me.GroupBox2.TabIndex = 17
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Nilai Rangking"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Guest"})
+        Me.ComboBox2.Location = New System.Drawing.Point(91, 45)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 19
+        Me.ComboBox2.Text = "-- Choose Position --"
         '
         'CrystalReportViewer2
         '
@@ -305,6 +329,8 @@ Partial Class fmhasil
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents CrystalReportViewer2 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents CrystalReport21 As CrystalReport2
     Friend WithEvents CrystalReport11 As CrystalReport1
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CrystalReport21 As CrystalReport2
+    Friend WithEvents ComboBox2 As ComboBox
 End Class

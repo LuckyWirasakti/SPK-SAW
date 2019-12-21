@@ -88,7 +88,7 @@ Public Class fmkaryawan
         txtssnkeluarga.Text = ""
         txtstattngkerja.Text = ""
         txtobjekid.Text = ""
-        txtposisi.Text = ""
+        cbposisi.Text = "-- Pilih Jabatan --"
         txttitle.Text = ""
         txtdirektorat.Text = ""
         txtunit.Text = ""
@@ -139,8 +139,8 @@ Public Class fmkaryawan
             MessageBox.Show("Isi Data")
             txtnik.Focus()
         Else
-            str = ("INSERT INTO `karyawan` (`nik`,`nama`,`tgl_lahir`,`kota_lahir`,`agama`,`jns_klmn`,`alamat`,`kota`,`suku`,`no_ktp`,`tgl_berlaku_ktp`,`no_kk`,`no_npwp`,`no_gsm`,`email`,`nm_ibu`,`gol_darah`,`no_bpjs`,`tgl_bpjs`,`no_jamsostek`,`tgl_jamsostek`,`kd_faskes`,`kd_faskes_gigi`,`sts_nikah`,`tgl_nikah`,`jml_anak`,`susunan_klrg`,`sts_tng_krj`,`objek_id`,`posisi`,`tittle`,`direktorat`,`unit`,`sub_unit`,`sektor`,`rayon`,`id_psa`,`nm_psa`,`witel`,`teritori`,`regional`,`sts_kerja`,`lama_ojt`,`sts_induksi`,`tgl_kerja`,`tgl_kontrak_pertama`,`tgl_awal_kontrak`,`tgl_akhir_kontrak`,`tahun_kontrak`,`band_posisi`,`tgl_band_posisi`,`level`,`tgl_level`,`sts_pj`,`tgl_sts_pj`,`tgl_fas_rmh`,`tgl_sel_fas_rmh`,`tgl_awal_nop`,`tgl_akhir_nop`,`tgl_awal_cop`,`tgl_akhir_cop`,`level_pend`,`tgl_level_pend`,`jurusan`,`peny_pend`,`no_rek`,`bank`,`kantor_cab`,`alamat_bank`,`nama_rek`,`pic_hr`,`time_zone`) values ('" & txtnik.Text & "','" & txtnama.Text & "','" & tgl_lahir.Text & "','" & txtktlahir.Text & "','" & txtagama.Text & "','" & txtjnskelamin.Text & "','" & txtalamat.Text & "','" & txtkota.Text & "','" & txtsuku.Text & "','" & txtnoktp.Text & "','" & txttglktp.Text & "','" & txtnokk.Text & "','" & txtnonpwp.Text & "','" & txtnogsm.Text & "','" & txtemail.Text & "','" & txtibu.Text & "','" & txtgoldar.Text & "','" & txtbpjs.Text & "','" & tgl_bpjs.Text & "','" & txtjamsostek.Text & "','" & tgl_bpjs.Text & "','" & txtfaskes.Text & "','" & txtfaskesgg.Text & "','" & txtstatnikah.Text & "','" & tgl_nikah.Text & "','" & txtanak.Text & "','" & txtssnkeluarga.Text & "','" & txtstattngkerja.Text & "','" & txtobjekid.Text & "','" & txtposisi.Text & "','" & txttitle.Text & "','" & txtdirektorat.Text & "','" & txtunit.Text & "','" & txtsubunit.Text & "','" & txtsektor.Text & "','" & txtrayon.Text & "','" & txtidpsa.Text & "','" & txtnmpsa.Text & "','" & txtwitel.Text & "','" & txtteritory.Text & "','" & txtregional.Text & "','" & txtstatkerja.Text & "','" & txtlamaojt.Text & "','" & txtstatinduksi.Text & "','" & tgl_mulai_krj.Text & "','" & tgl_kontrak_1.Text & "','" & tgl_aw_kontrak.Text & "','" & tgl_akh_kontrak.Text & "','" & txtthnkontrak.Text & "','" & txtbandpss.Text & "','" & tgl_band_pss.Text & "','" & txtlevel.Text & "','" & tgl_level.Text & "','" & txtstatpj.Text & "','" & tgl_stat_pj.Text & "','" & tgl_fak_rmh.Text & "','" & tgl_sel_fas.Text & "','" & tgl_aw_nop.Text & "','" & tgl_akh_nop.Text & "','" & tgl_aw_cop.Text & "','" & tgl_akh_cop.Text & "','" & txtlvlpend.Text & "','" & tgl_lv_pend.Text & "','" & txtjurusan.Text & "','" & txtpenypend.Text & "','" & txtnorek.Text & "','" & txtbank.Text & "','" & txtcabbank.Text & "','" & txtalmtbank.Text & "','" & txtnmrek.Text & "','" & txtpichr.Text & "','" & txttimezone.Text & "')")
-            MySql = New MySqlConnection(mysqlco)
+            str = ("INSERT INTO `karyawan` (`nik`,`nama`,`tgl_lahir`,`kota_lahir`,`agama`,`jns_klmn`,`alamat`,`kota`,`suku`,`no_ktp`,`tgl_berlaku_ktp`,`no_kk`,`no_npwp`,`no_gsm`,`email`,`nm_ibu`,`gol_darah`,`no_bpjs`,`tgl_bpjs`,`no_jamsostek`,`tgl_jamsostek`,`kd_faskes`,`kd_faskes_gigi`,`sts_nikah`,`tgl_nikah`,`jml_anak`,`susunan_klrg`,`sts_tng_krj`,`objek_id`,`posisi`,`tittle`,`direktorat`,`unit`,`sub_unit`,`sektor`,`rayon`,`id_psa`,`nm_psa`,`witel`,`teritori`,`regional`,`sts_kerja`,`lama_ojt`,`sts_induksi`,`tgl_kerja`,`tgl_kontrak_pertama`,`tgl_awal_kontrak`,`tgl_akhir_kontrak`,`tahun_kontrak`,`band_posisi`,`tgl_band_posisi`,`level`,`tgl_level`,`sts_pj`,`tgl_sts_pj`,`tgl_fas_rmh`,`tgl_sel_fas_rmh`,`tgl_awal_nop`,`tgl_akhir_nop`,`tgl_awal_cop`,`tgl_akhir_cop`,`level_pend`,`tgl_level_pend`,`jurusan`,`peny_pend`,`no_rek`,`bank`,`kantor_cab`,`alamat_bank`,`nama_rek`,`pic_hr`,`time_zone`) values ('" & txtnik.Text & "','" & txtnama.Text & "','" & tgl_lahir.Text & "','" & txtktlahir.Text & "','" & txtagama.Text & "','" & txtjnskelamin.Text & "','" & txtalamat.Text & "','" & txtkota.Text & "','" & txtsuku.Text & "','" & txtnoktp.Text & "','" & txttglktp.Text & "','" & txtnokk.Text & "','" & txtnonpwp.Text & "','" & txtnogsm.Text & "','" & txtemail.Text & "','" & txtibu.Text & "','" & txtgoldar.Text & "','" & txtbpjs.Text & "','" & tgl_bpjs.Text & "','" & txtjamsostek.Text & "','" & tgl_bpjs.Text & "','" & txtfaskes.Text & "','" & txtfaskesgg.Text & "','" & txtstatnikah.Text & "','" & tgl_nikah.Text & "','" & txtanak.Text & "','" & txtssnkeluarga.Text & "','" & txtstattngkerja.Text & "','" & txtobjekid.Text & "','" & cbposisi.Text & "','" & txttitle.Text & "','" & txtdirektorat.Text & "','" & txtunit.Text & "','" & txtsubunit.Text & "','" & txtsektor.Text & "','" & txtrayon.Text & "','" & txtidpsa.Text & "','" & txtnmpsa.Text & "','" & txtwitel.Text & "','" & txtteritory.Text & "','" & txtregional.Text & "','" & txtstatkerja.Text & "','" & txtlamaojt.Text & "','" & txtstatinduksi.Text & "','" & tgl_mulai_krj.Text & "','" & tgl_kontrak_1.Text & "','" & tgl_aw_kontrak.Text & "','" & tgl_akh_kontrak.Text & "','" & txtthnkontrak.Text & "','" & txtbandpss.Text & "','" & tgl_band_pss.Text & "','" & txtlevel.Text & "','" & tgl_level.Text & "','" & txtstatpj.Text & "','" & tgl_stat_pj.Text & "','" & tgl_fak_rmh.Text & "','" & tgl_sel_fas.Text & "','" & tgl_aw_nop.Text & "','" & tgl_akh_nop.Text & "','" & tgl_aw_cop.Text & "','" & tgl_akh_cop.Text & "','" & txtlvlpend.Text & "','" & tgl_lv_pend.Text & "','" & txtjurusan.Text & "','" & txtpenypend.Text & "','" & txtnorek.Text & "','" & txtbank.Text & "','" & txtcabbank.Text & "','" & txtalmtbank.Text & "','" & txtnmrek.Text & "','" & txtpichr.Text & "','" & txttimezone.Text & "')")
+            mysql = New MySqlConnection(mysqlco)
             cmd = New MySqlCommand(str, mysql)
             Try
                 MySql.Open()
@@ -198,7 +198,7 @@ Public Class fmkaryawan
                `susunan_klrg` = '" & txtssnkeluarga.Text & "', 
                `sts_tng_krj` = '" & txtstattngkerja.Text & "', 
                `objek_id` = '" & txtobjekid.Text & "', 
-               `posisi` = '" & txtposisi.Text & "', 
+               `posisi` = '" & cbposisi.Text & "', 
                `tittle` = '" & txttitle.Text & "', 
                `direktorat` = '" & txtdirektorat.Text & "', 
                `unit` = '" & txtunit.Text & "', 
@@ -246,7 +246,7 @@ Public Class fmkaryawan
             cmd.ExecuteNonQuery()
             MessageBox.Show("Data Diperbaharui")
         Catch ex As Exception
-            MessageBox.Show("Gagal Memperbaharui Data")
+            MessageBox.Show("Gagal Memperbaharui Data" + ex.ToString)
         End Try
     End Sub
 

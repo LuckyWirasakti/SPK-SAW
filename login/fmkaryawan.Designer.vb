@@ -120,7 +120,6 @@ Partial Class fmkaryawan
         Me.txtunit = New System.Windows.Forms.TextBox()
         Me.txtdirektorat = New System.Windows.Forms.TextBox()
         Me.txttitle = New System.Windows.Forms.TextBox()
-        Me.txtposisi = New System.Windows.Forms.TextBox()
         Me.txtobjekid = New System.Windows.Forms.TextBox()
         Me.txtwitel = New System.Windows.Forms.TextBox()
         Me.txtnmpsa = New System.Windows.Forms.TextBox()
@@ -177,6 +176,7 @@ Partial Class fmkaryawan
         Me.txtno = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnbaru = New System.Windows.Forms.Button()
+        Me.cbposisi = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -1008,13 +1008,6 @@ Partial Class fmkaryawan
         Me.txttitle.Size = New System.Drawing.Size(197, 20)
         Me.txttitle.TabIndex = 141
         '
-        'txtposisi
-        '
-        Me.txtposisi.Location = New System.Drawing.Point(615, 137)
-        Me.txtposisi.Name = "txtposisi"
-        Me.txtposisi.Size = New System.Drawing.Size(197, 20)
-        Me.txtposisi.TabIndex = 142
-        '
         'txtobjekid
         '
         Me.txtobjekid.Location = New System.Drawing.Point(615, 113)
@@ -1456,12 +1449,22 @@ Partial Class fmkaryawan
         Me.btnbaru.Text = "New"
         Me.btnbaru.UseVisualStyleBackColor = True
         '
+        'cbposisi
+        '
+        Me.cbposisi.FormattingEnabled = True
+        Me.cbposisi.Items.AddRange(New Object() {"-- Choose Postition --", "Team Leader", "Site Manager", "Manager", "General Manager"})
+        Me.cbposisi.Location = New System.Drawing.Point(615, 135)
+        Me.cbposisi.Name = "cbposisi"
+        Me.cbposisi.Size = New System.Drawing.Size(197, 21)
+        Me.cbposisi.TabIndex = 216
+        '
         'fmkaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1357, 788)
+        Me.Controls.Add(Me.cbposisi)
         Me.Controls.Add(Me.btnbaru)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtno)
@@ -1518,7 +1521,6 @@ Partial Class fmkaryawan
         Me.Controls.Add(Me.txtnmpsa)
         Me.Controls.Add(Me.txtwitel)
         Me.Controls.Add(Me.txtobjekid)
-        Me.Controls.Add(Me.txtposisi)
         Me.Controls.Add(Me.txttitle)
         Me.Controls.Add(Me.txtdirektorat)
         Me.Controls.Add(Me.txtunit)
@@ -1724,7 +1726,6 @@ Partial Class fmkaryawan
     Friend WithEvents txtunit As System.Windows.Forms.TextBox
     Friend WithEvents txtdirektorat As System.Windows.Forms.TextBox
     Friend WithEvents txttitle As System.Windows.Forms.TextBox
-    Friend WithEvents txtposisi As System.Windows.Forms.TextBox
     Friend WithEvents txtobjekid As System.Windows.Forms.TextBox
     Friend WithEvents txtwitel As System.Windows.Forms.TextBox
     Friend WithEvents txtnmpsa As System.Windows.Forms.TextBox
@@ -1781,4 +1782,5 @@ Partial Class fmkaryawan
     Friend WithEvents txtno As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnbaru As System.Windows.Forms.Button
+    Friend WithEvents cbposisi As ComboBox
 End Class

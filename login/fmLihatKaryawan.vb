@@ -61,7 +61,7 @@ Public Class fmLihatKaryawan
             fmkaryawan.txtssnkeluarga.Text = row.Cells("susunan_klrg").Value.ToString
             fmkaryawan.txtstattngkerja.Text = row.Cells("sts_tng_krj").Value.ToString
             fmkaryawan.txtobjekid.Text = row.Cells("objek_id").Value.ToString
-            fmkaryawan.txtposisi.Text = row.Cells("posisi").Value.ToString
+            fmkaryawan.cbposisi.Text = row.Cells("posisi").Value.ToString
             fmkaryawan.txttitle.Text = row.Cells("tittle").Value.ToString
             fmkaryawan.txtdirektorat.Text = row.Cells("direktorat").Value.ToString
             fmkaryawan.txtunit.Text = row.Cells("unit").Value.ToString
