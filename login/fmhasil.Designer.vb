@@ -44,6 +44,8 @@ Partial Class fmhasil
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.CrystalReportViewer2 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.CrystalReport21 = New spk.CrystalReport2()
+        Me.CrystalReport12 = New spk.CrystalReport1()
+        Me.CrystalReport22 = New spk.CrystalReport2()
         Me.pnlLeftSide.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTopSide.SuspendLayout()
@@ -219,7 +221,7 @@ Partial Class fmhasil
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"General Manager"})
+        Me.ComboBox1.Items.AddRange(New Object() {"Team Leader", "Site Manager", "Manager", "General Manager"})
         Me.ComboBox1.Location = New System.Drawing.Point(88, 45)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
@@ -234,7 +236,7 @@ Partial Class fmhasil
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(3, 16)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport11
+        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport12
         Me.CrystalReportViewer1.ShowLogo = False
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(709, 526)
         Me.CrystalReportViewer1.TabIndex = 18
@@ -266,7 +268,7 @@ Partial Class fmhasil
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Guest"})
+        Me.ComboBox2.Items.AddRange(New Object() {"Team Leader", "Site Manager", "Manager", "General Manager"})
         Me.ComboBox2.Location = New System.Drawing.Point(91, 45)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
@@ -281,7 +283,7 @@ Partial Class fmhasil
         Me.CrystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer2.Location = New System.Drawing.Point(3, 16)
         Me.CrystalReportViewer2.Name = "CrystalReportViewer2"
-        Me.CrystalReportViewer2.ReportSource = Me.CrystalReport21
+        Me.CrystalReportViewer2.ReportSource = Me.CrystalReport22
         Me.CrystalReportViewer2.ShowLogo = False
         Me.CrystalReportViewer2.Size = New System.Drawing.Size(709, 526)
         Me.CrystalReportViewer2.TabIndex = 18
@@ -333,4 +335,6 @@ Partial Class fmhasil
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents CrystalReport21 As CrystalReport2
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents CrystalReport12 As CrystalReport1
+    Friend WithEvents CrystalReport22 As CrystalReport2
 End Class
